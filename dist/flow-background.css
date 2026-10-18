@@ -1,0 +1,13 @@
+/* The selected flow-line background, with quiet surfaces behind the content. */
+:root{--bg:#eff5f8;--accent:#3c7a8a;--line:#dce5e8;--teal:#246375}
+body{isolation:isolate;min-height:100vh}
+#flow-background{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.layout{padding-bottom:64px}
+.layout main{background:rgba(255,255,255,.88);border:1px solid #ffffffb3;border-radius:14px;padding:28px 30px;margin:-28px -30px 0;box-shadow:0 14px 60px #21455805}
+.profile{background:rgba(255,255,255,.95);border-color:#ffffffb3;border-radius:14px;box-shadow:0 14px 60px #21455808}
+.background-toggle{position:fixed;right:18px;bottom:18px;z-index:5;min-height:36px;padding:7px 12px;border:1px solid #c6d9e0;border-radius:7px;background:#fffffff2;color:var(--teal);font-size:11px;line-height:1.5;box-shadow:0 3px 16px #2548540c}
+.background-toggle:hover{background:#eaf3f6;border-color:#9abcc9}
+.background-toggle[hidden]{display:none}
+@media(max-width:1000px){.layout{gap:45px}.layout main{padding:24px;margin:-24px -18px 0}}
+@media(max-width:740px){.layout main{padding:24px 16px;margin:24px -10px 0}.background-toggle{right:12px;bottom:12px;min-height:44px;font-size:12px}}
+@media print{#flow-background,.background-toggle{display:none!important}body{background:white}.layout{padding-bottom:0}.layout main{border:0;border-radius:0;margin:0;padding:0;background:white;box-shadow:none}.profile{background:white;border:0;border-radius:0;box-shadow:none}}

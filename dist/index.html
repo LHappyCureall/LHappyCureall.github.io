@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Haochen Liu (刘昊琛), PhD student at the University of Macau. Research in computational mathematics, incompressible two-phase flows, finite element methods and parallel solvers.">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#eff5f8">
   <title>Haochen Liu | 刘昊琛</title>
   <link rel="canonical" href="https://LHappyCureall.github.io/">
   <meta property="og:type" content="website">
@@ -13,9 +13,15 @@
   <meta property="og:url" content="https://LHappyCureall.github.io/">
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./flow-background.css">
   <script src="./script.js" defer></script>
+  <script src="./flow-background.js" defer></script>
 </head>
 <body>
+  <canvas id="flow-background" aria-hidden="true"></canvas>
+  <button id="background-toggle" class="background-toggle" type="button" aria-controls="flow-background" hidden>
+    <span lang="en">Pause background</span><span lang="zh-CN">暂停背景</span>
+  </button>
   <a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="zh-CN">跳至正文</span></a>
   <div class="layout">
     <aside class="profile" aria-label="Profile">
